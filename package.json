@@ -1,0 +1,41 @@
+{
+	"name": "artermo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kuba-medrek/artermo.git"
+	},
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "mocha ./test/**/*.test.js",
+		"clean": "knex migrate:rollback",
+		"build": "npm run build-db && npm run build-docs",
+		"build-db": "knex migrate:latest",
+		"build-docs": "apidoc -o docs/ -e node_modules/"
+	},
+	"author": "Kuba Mędrek",
+	"license": "WTFPL",
+	"dependencies": {
+		"apidoc": "^0.17.7",
+		"json2csv": "^4.3.2",
+		"jsonschema": "^1.2.4",
+		"knex": "^0.15.2",
+		"koa": "^2.5.2",
+		"koa-bodyparser": "^4.2.1",
+		"koa-cors": "0.0.16",
+		"koa-router": "^7.4.0",
+		"moment": "^2.22.2",
+		"moment-timezone": "^0.5.23",
+		"pg": "^7.4.3"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"chai-http": "^4.0.0",
+		"chai-like": "^1.1.1",
+		"chai-things": "^0.2.0",
+		"mocha": "^5.2.0",
+		"mocha-silent-reporter": "^1.0.0"
+	}
+}
