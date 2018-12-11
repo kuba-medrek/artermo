@@ -1,5 +1,7 @@
 #
 secret.js
+docs.js
+knexfile.js
 
 # Logs
 logs
@@ -79,4 +81,4 @@ typings/
 .fusebox/
 
 #DynamoDB Local files 
-.dynamodb/ 
+.dynamodb/
